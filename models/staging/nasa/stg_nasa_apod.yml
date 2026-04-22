@@ -6,13 +6,33 @@ models:
     columns:
       - name: apod_date
         description: "Fecha de publicación del contenido APOD."
+        tests:
+          - not_null
+          - unique
+
       - name: url
         description: "URL del contenido."
+
       - name: title
         description: "Título del contenido."
+        tests:
+          - not_null
+
       - name: media_type
         description: "Tipo de media."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['image', 'video', 'other']
+
       - name: explanation
         description: "Descripción del contenido."
+
       - name: service_version
         description: "Versión del servicio de la API."
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 1

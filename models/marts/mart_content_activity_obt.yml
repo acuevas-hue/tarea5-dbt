@@ -6,21 +6,53 @@ models:
     columns:
       - name: source_name
         description: "Fuente de origen."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['nasa_apod', 'jsonplaceholder_posts']
+
       - name: activity_date
         description: "Fecha asociada al contenido."
+        tests:
+          - not_null
+
       - name: year
         description: "Año derivado de la fecha."
+        tests:
+          - not_null
+
       - name: month
         description: "Mes derivado de la fecha."
+        tests:
+          - not_null
+
       - name: day
         description: "Día derivado de la fecha."
+        tests:
+          - not_null
+
       - name: content_title
         description: "Título del contenido."
+        tests:
+          - not_null
+
       - name: content_category
         description: "Categoría del contenido."
+        tests:
+          - not_null
+
       - name: content_description
         description: "Descripción del contenido."
+
       - name: user_id
         description: "Usuario asociado cuando aplica."
+
       - name: record_count
         description: "Contador unitario."
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 200
+          max_value: 400

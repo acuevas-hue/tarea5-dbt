@@ -6,9 +6,26 @@ models:
     columns:
       - name: date_day
         description: "Fecha completa."
+        tests:
+          - not_null
+          - unique
+
       - name: year
         description: "Año."
+        tests:
+          - not_null
+
       - name: month
         description: "Mes."
+        tests:
+          - not_null
+
       - name: day
         description: "Día del mes."
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 300
+          max_value: 400

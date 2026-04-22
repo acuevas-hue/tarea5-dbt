@@ -161,3 +161,10 @@ Este proyecto sirve como base para las siguientes tareas (testing, orquestación
 ## DAG
 
 ![DAG](docs/dag_tarea5.png)
+## Capturas
+
+### DAG principal
+![DAG principal](docs/DAG2.png)
+
+### DAG con documentación
+![DAG con documentación](docs/DAG4.png)

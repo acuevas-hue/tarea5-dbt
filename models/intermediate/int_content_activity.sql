@@ -11,7 +11,7 @@ from {{ ref('stg_nasa_apod') }}
 union all
 
 select
-    current_date as activity_date,
+    date '2024-01-01' as activity_date,
     'jsonplaceholder_posts' as source_name,
     post_title as content_title,
     'post' as content_category,
