@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_nasa_apod
+    description: "Modelo staging para los datos de NASA APOD."
+    columns:
+      - name: apod_date
+        description: "Fecha de publicación del contenido APOD."
+      - name: url
+        description: "URL del contenido."
+      - name: title
+        description: "Título del contenido."
+      - name: media_type
+        description: "Tipo de media."
+      - name: explanation
+        description: "Descripción del contenido."
+      - name: service_version
+        description: "Versión del servicio de la API."

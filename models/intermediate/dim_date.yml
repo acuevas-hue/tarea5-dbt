@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "Dimensión de fechas utilizada para análisis temporal."
+    columns:
+      - name: date_day
+        description: "Fecha completa."
+      - name: year
+        description: "Año."
+      - name: month
+        description: "Mes."
+      - name: day
+        description: "Día del mes."

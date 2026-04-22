@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_jsonplaceholder_posts
+    description: "Modelo staging para los posts de JSONPlaceholder."
+    columns:
+      - name: post_id
+        description: "Identificador único del post."
+      - name: user_id
+        description: "Identificador del usuario autor."
+      - name: post_title
+        description: "Título del post."
+      - name: post_body
+        description: "Contenido del post."

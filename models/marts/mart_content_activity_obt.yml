@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: mart_content_activity_obt
+    description: "Modelo mart OBT que centraliza contenido proveniente de ambas fuentes."
+    columns:
+      - name: source_name
+        description: "Fuente de origen."
+      - name: activity_date
+        description: "Fecha asociada al contenido."
+      - name: year
+        description: "Año derivado de la fecha."
+      - name: month
+        description: "Mes derivado de la fecha."
+      - name: day
+        description: "Día derivado de la fecha."
+      - name: content_title
+        description: "Título del contenido."
+      - name: content_category
+        description: "Categoría del contenido."
+      - name: content_description
+        description: "Descripción del contenido."
+      - name: user_id
+        description: "Usuario asociado cuando aplica."
+      - name: record_count
+        description: "Contador unitario."

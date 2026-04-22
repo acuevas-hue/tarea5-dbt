@@ -1,0 +1,27 @@
+name: 'proyecto_tarea5'
+version: '1.0.0'
+config-version: 2
+
+profile: 'proyecto_tarea5'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  proyecto_tarea5:
+    staging:
+      +schema: main_staging
+      +materialized: view
+    intermediate:
+      +schema: main_intermediate
+      +materialized: view
+    marts:
+      +schema: main_marts
+      +materialized: table

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_content_activity
+    description: "Modelo intermediate que unifica el contenido de NASA APOD y JSONPlaceholder."
+    columns:
+      - name: activity_date
+        description: "Fecha asociada al contenido."
+      - name: source_name
+        description: "Nombre de la fuente."
+      - name: content_title
+        description: "Título del contenido."
+      - name: content_category
+        description: "Categoría del contenido."
+      - name: content_description
+        description: "Descripción o texto del contenido."
+      - name: user_id
+        description: "Usuario asociado cuando aplica."
+      - name: record_count
+        description: "Contador unitario para agregaciones."

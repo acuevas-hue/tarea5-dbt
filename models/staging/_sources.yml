@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: airbyte_tp
+    schema: airbyte
+    tables:
+      - name: nasa_apod_api
+        description: "Datos crudos de NASA APOD cargados mediante Airbyte."
+      - name: jsonplaceholder
+        description: "Datos crudos de JSONPlaceholder Posts cargados mediante Airbyte."
