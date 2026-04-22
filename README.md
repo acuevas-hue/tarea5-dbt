@@ -158,3 +158,6 @@ Se logró construir un pipeline de datos completo desde la ingesta hasta la capa
 Este proyecto sirve como base para las siguientes tareas (testing, orquestación y visualización) y para el proyecto final integrador.
 
 ---
+## DAG
+
+![DAG](docs/dag_tarea5.png)
