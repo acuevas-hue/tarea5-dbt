@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: tarea7-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: tarea7db
+      MYSQL_USER: tarea7user
+      MYSQL_PASSWORD: tarea7pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: tarea7-metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+volumes:
+  mysql_data:

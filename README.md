@@ -168,3 +168,17 @@ Este proyecto sirve como base para las siguientes tareas (testing, orquestación
 
 ### DAG con documentación
 ![DAG con documentación](docs/DAG4.png)
+## Evidencias adicionales
+
+### DAG 5
+![DAG5](docs/DAG5.png)
+
+### DAG 6
+![DAG6](docs/DAG6.png)
+
+### DAG 7
+![DAG7](docs/DAG7.png)
+
+## Observación sobre Metabase
+
+No se pudo completar la integración con Metabase debido a problemas de autenticación con la conexión a MySQL, los cuales no pudieron resolverse durante el desarrollo de esta etapa. A pesar de ello, sí se logró completar el resto del flujo de trabajo previsto, incluyendo la carga de datos, la sincronización mediante Airbyte, la transformación con dbt y la orquestación con Prefect.
